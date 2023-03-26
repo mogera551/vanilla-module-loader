@@ -36,6 +36,15 @@ test('Util.toKebabCase kebab to kebab', () => {
   expect(Util.toKebabCase("a-b-c")).toBe("a-b-c");
 });
 
+test('Util.toKebabCase dotted to kebab', () => {
+  expect(Util.toKebabCase("aaa")).toBe("aaa");
+  expect(Util.toKebabCase("aaa.bbb")).toBe("aaa-bbb");
+  expect(Util.toKebabCase("aaa.bbb.ccc")).toBe("aaa-bbb-ccc");
+  expect(Util.toKebabCase("a")).toBe("a");
+  expect(Util.toKebabCase("a.b")).toBe("a-b");
+  expect(Util.toKebabCase("a.b.c")).toBe("a-b-c");
+});
+
 test('Util.toKebabCase null, empty', () => {
   expect(Util.toKebabCase(undefined)).toBe(undefined);
   expect(Util.toKebabCase(null)).toBe(null);
