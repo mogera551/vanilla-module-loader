@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680446055891" clover="3.2.0">
-  <project timestamp="1680446055892" name="All files">
+<coverage generated="1680446867737" clover="3.2.0">
+  <project timestamp="1680446867737" name="All files">
     <metrics statements="113" coveredstatements="113" conditionals="42" coveredconditionals="42" methods="23" coveredmethods="22" elements="178" coveredelements="177" complexity="0" loc="113" ncloc="113" packages="1" files="7" classes="7"/>
     <file name="Config.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Config.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

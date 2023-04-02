@@ -11,7 +11,7 @@ const DEAFULT_PATH = "./";
 
 export class Config {
   /**
-   * @type {NameType} ファイル名に使用するデフォルトの名前の形式（kebab,snake,upperCamel,lowerCamel）
+   * @type {NameType} ファイル名に使用するデフォルトの名前の形式（kebab,snake,upperCamel,lowerCamel,dotted）
    * @static
    */
   defaultNameType = DEFAULT_NAME_TYPE;
