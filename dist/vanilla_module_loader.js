@@ -29,6 +29,7 @@ const NameType = {
   snake: "snake",
   upperCamel: "uppercamel",
   lowerCamel: "lowercamel",
+  dotted: "dotted",
 };
 
 class NameTypes {
@@ -40,11 +41,13 @@ class NameTypes {
    *  [NameType.snake]:string,
    *  [NameType.upperCamel]:string,
    *  [NameType.lowerCamel]:string,
+   *  [NameType.dotted]:string,
    * }}
    */
   static getNames(name) {
     const kebabName = Util.toKebabCase(name);
     const snakeName = kebabName.replaceAll("-", "_");
+    const dottedName = kebabName.replaceAll("-", ".");
     const upperCamelName = kebabName.split("-").map((text, index) => {
       if (typeof text[0] !== "undefined") {
         text = text[0].toUpperCase() + text.slice(1);
@@ -57,6 +60,7 @@ class NameTypes {
       [NameType.snake]: snakeName,
       [NameType.upperCamel]: upperCamelName,
       [NameType.lowerCamel]: lowerCamelName,
+      [NameType.dotted]: dottedName,
     }
   }
 
@@ -123,11 +127,13 @@ class Path {
     replaceFilePath = replaceFilePath.replaceAll(`{${replacePrefixNames[NameType.snake]}}`, prefixNames[NameType.snake]);
     replaceFilePath = replaceFilePath.replaceAll(`{${replacePrefixNames[NameType.lowerCamel]}}`, prefixNames[NameType.lowerCamel]);
     replaceFilePath = replaceFilePath.replaceAll(`{${replacePrefixNames[NameType.upperCamel]}}`, prefixNames[NameType.upperCamel]);
+    replaceFilePath = replaceFilePath.replaceAll(`{${replacePrefixNames[NameType.dotted]}}`, prefixNames[NameType.dotted]);
 
     replaceFilePath = replaceFilePath.replaceAll(`{${replaceSubNames[NameType.kebab]}}`, subNames[NameType.kebab]);
     replaceFilePath = replaceFilePath.replaceAll(`{${replaceSubNames[NameType.snake]}}`, subNames[NameType.snake]);
     replaceFilePath = replaceFilePath.replaceAll(`{${replaceSubNames[NameType.lowerCamel]}}`, subNames[NameType.lowerCamel]);
     replaceFilePath = replaceFilePath.replaceAll(`{${replaceSubNames[NameType.upperCamel]}}`, subNames[NameType.upperCamel]);
+    replaceFilePath = replaceFilePath.replaceAll(`{${replaceSubNames[NameType.dotted]}}`, subNames[NameType.dotted]);
 
     if (filePath === replaceFilePath && replaceFilePath.slice(-3) !== ".js") {
       // 変換されなかった場合、パスにファイル名を付加する
@@ -139,6 +145,7 @@ class Path {
       replaceExportName = replaceExportName.replaceAll(`{${replaceSubNames[NameType.snake]}}`, subNames[NameType.snake]);
       replaceExportName = replaceExportName.replaceAll(`{${replaceSubNames[NameType.lowerCamel]}}`, subNames[NameType.lowerCamel]);
       replaceExportName = replaceExportName.replaceAll(`{${replaceSubNames[NameType.upperCamel]}}`, subNames[NameType.upperCamel]);
+      replaceExportName = replaceExportName.replaceAll(`{${replaceSubNames[NameType.dotted]}}`, subNames[NameType.dotted]);
     }
     return {
       filePath: replaceFilePath,
