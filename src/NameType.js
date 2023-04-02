@@ -8,6 +8,7 @@ export const NameType = {
   snake: "snake",
   upperCamel: "uppercamel",
   lowerCamel: "lowercamel",
+  dotted: "dotted",
 };
 
 /**
@@ -18,6 +19,7 @@ export const NameTypeByText = {
   "snake": NameType.snake,
   "uppercamel": NameType.upperCamel,
   "lowercamel": NameType.lowerCamel,
+  "dotted": NameType.dotted,
 }
 
 export class NameTypes {
@@ -29,11 +31,13 @@ export class NameTypes {
    *  [NameType.snake]:string,
    *  [NameType.upperCamel]:string,
    *  [NameType.lowerCamel]:string,
+   *  [NameType.dotted]:string,
    * }}
    */
   static getNames(name) {
     const kebabName = Util.toKebabCase(name);
     const snakeName = kebabName.replaceAll("-", "_");
+    const dottedName = kebabName.replaceAll("-", ".");
     const upperCamelName = kebabName.split("-").map((text, index) => {
       if (typeof text[0] !== "undefined") {
         text = text[0].toUpperCase() + text.slice(1);
@@ -46,6 +50,7 @@ export class NameTypes {
       [NameType.snake]: snakeName,
       [NameType.upperCamel]: upperCamelName,
       [NameType.lowerCamel]: lowerCamelName,
+      [NameType.dotted]: dottedName,
     }
   }
 

@@ -25,6 +25,12 @@ test('Path.getPathInfo path:./, prefixName:myapp-components, subName:main-select
   expect(info.exportName).toBe(undefined);
 });
 
+test('Path.getPathInfo path:./, prefixName:myapp-components, subName:main-selector, defaultNameType:NameType.upperCamel', () => {
+  const info = Path.getPathInfo("./", "myapp-components", "main-selector", NameType.dotted);
+  expect(info.filePath).toBe("./main.selector.js");
+  expect(info.exportName).toBe(undefined);
+});
+
 test('Path.getPathInfo path:./test, prefixName:myapp-components, subName:main-selector, defaultNameType:NameType.kebab', () => {
   const info = Path.getPathInfo("./test", "myapp-components", "main-selector", NameType.kebab);
   expect(info.filePath).toBe("./test/main-selector.js");
@@ -46,6 +52,12 @@ test('Path.getPathInfo path:./test, prefixName:myapp-components, subName:main-se
 test('Path.getPathInfo path:./test, prefixName:myapp-components, subName:main-selector, defaultNameType:NameType.upperCamel', () => {
   const info = Path.getPathInfo("./test", "myapp-components", "main-selector", NameType.upperCamel);
   expect(info.filePath).toBe("./test/MainSelector.js");
+  expect(info.exportName).toBe(undefined);
+});
+
+test('Path.getPathInfo path:./test, prefixName:myapp-components, subName:main-selector, defaultNameType:NameType.snake', () => {
+  const info = Path.getPathInfo("./test", "myapp-components", "main-selector", NameType.dotted);
+  expect(info.filePath).toBe("./test/main.selector.js");
   expect(info.exportName).toBe(undefined);
 });
 
