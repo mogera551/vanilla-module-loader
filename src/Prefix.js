@@ -9,15 +9,16 @@
  * prefix_name: myapp_components
  * PrefixName: MyappComponents
  * prefixName: myappComponents
+ * prefix.name: myapp.components
  * 
  * sub-name: main-selector
  * sub_name: main_selector
  * SubName: MainSelector
  * subName: mainSelector
+ * sub.name: main.selector
  * 
  * load file:
  * import default from ./components/mainSelector.js
- * 
  * 
  * example:
  * myapp-components-main-selector
@@ -29,19 +30,17 @@
  * prefix_name: myapp_components
  * PrefixName: MyappComponents
  * prefixName: myappComponents
+ * prefix.name: myapp.components
  * 
  * sub-name: main-selector
  * sub_name: main_selector
  * SubName: MainSelector
  * subName: mainSelector
+ * sub.name: main.selector
  * 
  * load file:
  * import { mainSelector } from ./components/MyappComponents.js
  */
-
-import { NameType } from "./NameType.js";
-import { Path } from "./Path.js";
-
 
 export class Prefix {
   prefix;
