@@ -232,7 +232,7 @@ test('loader module load default', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -258,7 +258,7 @@ test('loader module load default multi', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -285,7 +285,7 @@ test('loader module load prefix match', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -312,7 +312,7 @@ test('loader module load prefix match, arguments load names', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -339,7 +339,7 @@ test('loader module multi load prefix match', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -365,7 +365,7 @@ test('loader module load prefix no match, no default path', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -388,7 +388,7 @@ test('loader module load fail', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };
@@ -411,7 +411,7 @@ test('loader module multi load fail', async () => {
   }
   const loaded = [];
   const RegistrarEx = class extends Registrar {
-    static regist(name, module) {
+    static register(name, module) {
       loaded.push({ name, module });
     }
   };

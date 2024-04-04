@@ -5,7 +5,7 @@ export class Registrar {
    * @param {any} module 
    * @static
    */
-  static regist(name, module) {
+  static register(name, module) {
 
   }
 }

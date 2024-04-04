@@ -194,7 +194,7 @@ export class Loader {
       } else {
         moduleData = module.default;
       }
-      this.#registrar.regist(loadName, moduleData);
+      this.#registrar.register(loadName, moduleData);
     }
     return this;
   }

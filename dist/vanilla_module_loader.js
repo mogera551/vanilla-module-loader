@@ -5,7 +5,7 @@ class Registrar {
    * @param {any} module 
    * @static
    */
-  static regist(name, module) {
+  static register(name, module) {
 
   }
 }
@@ -423,7 +423,7 @@ class Loader {
       } else {
         moduleData = module.default;
       }
-      this.#registrar.regist(loadName, moduleData);
+      this.#registrar.register(loadName, moduleData);
     }
     return this;
   }
