@@ -421,7 +421,11 @@ class Loader {
         }
         moduleData = module[loadPaths.exportName];
       } else {
-        moduleData = module.default;
+        if (typeof module.default === "undefined") {
+          moduleData = module;
+        } else {
+          moduleData = module.default;
+        }
       }
       this.#registrar.register(loadName, moduleData);
     }

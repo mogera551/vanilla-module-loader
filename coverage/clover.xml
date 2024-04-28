@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1712239656967" clover="3.2.0">
-  <project timestamp="1712239656967" name="All files">
-    <metrics statements="113" coveredstatements="113" conditionals="42" coveredconditionals="42" methods="23" coveredmethods="22" elements="178" coveredelements="177" complexity="0" loc="113" ncloc="113" packages="1" files="7" classes="7"/>
+<coverage generated="1714313481262" clover="3.2.0">
+  <project timestamp="1714313481262" name="All files">
+    <metrics statements="115" coveredstatements="115" conditionals="44" coveredconditionals="44" methods="23" coveredmethods="22" elements="182" coveredelements="181" complexity="0" loc="115" ncloc="115" packages="1" files="7" classes="7"/>
     <file name="Config.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Config.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="6" count="2" type="stmt"/>
@@ -11,7 +11,7 @@
       <line num="27" count="60" type="stmt"/>
     </file>
     <file name="Loader.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Loader.js">
-      <metrics statements="61" coveredstatements="61" conditionals="24" coveredconditionals="24" methods="14" coveredmethods="14"/>
+      <metrics statements="63" coveredstatements="63" conditionals="26" coveredconditionals="26" methods="14" coveredmethods="14"/>
       <line num="39" count="21" type="stmt"/>
       <line num="40" count="21" type="stmt"/>
       <line num="41" count="21" type="stmt"/>
@@ -50,43 +50,45 @@
       <line num="161" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="162" count="10" type="stmt"/>
       <line num="163" count="10" type="stmt"/>
-      <line num="164" count="13" type="stmt"/>
-      <line num="166" count="13" type="stmt"/>
-      <line num="167" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="164" count="14" type="stmt"/>
+      <line num="166" count="14" type="stmt"/>
+      <line num="167" count="14" type="cond" truecount="2" falsecount="0"/>
       <line num="168" count="6" type="stmt"/>
       <line num="169" count="6" type="stmt"/>
-      <line num="171" count="13" type="cond" truecount="4" falsecount="0"/>
-      <line num="172" count="6" type="stmt"/>
-      <line num="174" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="171" count="14" type="cond" truecount="4" falsecount="0"/>
+      <line num="172" count="7" type="stmt"/>
+      <line num="174" count="14" type="cond" truecount="2" falsecount="0"/>
       <line num="175" count="1" type="stmt"/>
-      <line num="178" count="12" type="stmt"/>
-      <line num="179" count="12" type="stmt"/>
-      <line num="180" count="12" type="stmt"/>
-      <line num="183" count="12" type="stmt"/>
-      <line num="184" count="12" type="stmt"/>
+      <line num="178" count="13" type="stmt"/>
+      <line num="179" count="13" type="stmt"/>
+      <line num="180" count="13" type="stmt"/>
+      <line num="183" count="13" type="stmt"/>
+      <line num="184" count="13" type="stmt"/>
       <line num="186" count="1" type="stmt"/>
-      <line num="189" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="189" count="12" type="cond" truecount="2" falsecount="0"/>
       <line num="190" count="5" type="cond" truecount="2" falsecount="0"/>
       <line num="191" count="1" type="stmt"/>
       <line num="193" count="4" type="stmt"/>
-      <line num="195" count="6" type="stmt"/>
-      <line num="197" count="10" type="stmt"/>
-      <line num="199" count="7" type="stmt"/>
-      <line num="208" count="1" type="stmt"/>
+      <line num="195" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="196" count="1" type="stmt"/>
+      <line num="198" count="6" type="stmt"/>
+      <line num="201" count="11" type="stmt"/>
+      <line num="203" count="7" type="stmt"/>
+      <line num="212" count="1" type="stmt"/>
     </file>
     <file name="NameType.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\NameType.js">
       <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <line num="6" count="4" type="stmt"/>
       <line num="17" count="4" type="stmt"/>
-      <line num="38" count="152" type="stmt"/>
-      <line num="39" count="152" type="stmt"/>
-      <line num="40" count="152" type="stmt"/>
-      <line num="41" count="152" type="stmt"/>
-      <line num="42" count="271" type="cond" truecount="2" falsecount="0"/>
-      <line num="43" count="255" type="stmt"/>
-      <line num="45" count="271" type="stmt"/>
-      <line num="47" count="152" type="cond" truecount="2" falsecount="0"/>
-      <line num="48" count="152" type="stmt"/>
+      <line num="38" count="154" type="stmt"/>
+      <line num="39" count="154" type="stmt"/>
+      <line num="40" count="154" type="stmt"/>
+      <line num="41" count="154" type="stmt"/>
+      <line num="42" count="274" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="257" type="stmt"/>
+      <line num="45" count="274" type="stmt"/>
+      <line num="47" count="154" type="cond" truecount="2" falsecount="0"/>
+      <line num="48" count="154" type="stmt"/>
     </file>
     <file name="Path.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Path.js">
       <metrics statements="28" coveredstatements="28" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
@@ -94,30 +96,30 @@
       <line num="4" count="2" type="stmt"/>
       <line num="6" count="2" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
-      <line num="22" count="49" type="stmt"/>
-      <line num="23" count="49" type="stmt"/>
-      <line num="24" count="49" type="stmt"/>
-      <line num="25" count="49" type="stmt"/>
-      <line num="26" count="49" type="stmt"/>
-      <line num="28" count="49" type="stmt"/>
-      <line num="29" count="49" type="stmt"/>
-      <line num="30" count="49" type="stmt"/>
-      <line num="31" count="49" type="stmt"/>
-      <line num="32" count="49" type="stmt"/>
-      <line num="34" count="49" type="stmt"/>
-      <line num="35" count="49" type="stmt"/>
-      <line num="36" count="49" type="stmt"/>
-      <line num="37" count="49" type="stmt"/>
-      <line num="38" count="49" type="stmt"/>
-      <line num="40" count="49" type="cond" truecount="4" falsecount="0"/>
-      <line num="42" count="17" type="cond" truecount="2" falsecount="0"/>
-      <line num="45" count="49" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="50" type="stmt"/>
+      <line num="23" count="50" type="stmt"/>
+      <line num="24" count="50" type="stmt"/>
+      <line num="25" count="50" type="stmt"/>
+      <line num="26" count="50" type="stmt"/>
+      <line num="28" count="50" type="stmt"/>
+      <line num="29" count="50" type="stmt"/>
+      <line num="30" count="50" type="stmt"/>
+      <line num="31" count="50" type="stmt"/>
+      <line num="32" count="50" type="stmt"/>
+      <line num="34" count="50" type="stmt"/>
+      <line num="35" count="50" type="stmt"/>
+      <line num="36" count="50" type="stmt"/>
+      <line num="37" count="50" type="stmt"/>
+      <line num="38" count="50" type="stmt"/>
+      <line num="40" count="50" type="cond" truecount="4" falsecount="0"/>
+      <line num="42" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="50" type="cond" truecount="2" falsecount="0"/>
       <line num="46" count="6" type="stmt"/>
       <line num="47" count="6" type="stmt"/>
       <line num="48" count="6" type="stmt"/>
       <line num="49" count="6" type="stmt"/>
       <line num="50" count="6" type="stmt"/>
-      <line num="52" count="49" type="stmt"/>
+      <line num="52" count="50" type="stmt"/>
     </file>
     <file name="Prefix.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Prefix.js">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -134,7 +136,7 @@
     </file>
     <file name="Util.js" path="C:\Users\m.kikuzawa\Documents\git\vanilla-module-loader\src\Util.js">
       <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <line num="7" count="226" type="cond" truecount="4" falsecount="0"/>
+      <line num="7" count="229" type="cond" truecount="4" falsecount="0"/>
     </file>
   </project>
 </coverage>

@@ -226,7 +226,7 @@ test('loader module load default', async () => {
   const config = {
     defaultNameType:"uppercamel",
     defaultPath:"../test_modules/default", 
-    loadNames:[ "myapp-main", "myapp-sub" ],
+    loadNames:[ "myapp-main", "myapp-sub", "no-default" ],
     prefixMap: {
     }
   }
@@ -243,6 +243,7 @@ test('loader module load default', async () => {
     expect(loaded).toEqual([
       { name:"myapp-main", module: { name:"./default/MyappMain.js" } },
       { name:"myapp-sub", module: { name:"./default/MyappSub.js" } },
+      { name:"no-default", module: { name:"./default/NoDefault.js" } },
     ]);
   });
 

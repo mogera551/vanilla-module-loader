@@ -190,9 +190,13 @@ export class Loader {
         if (!(loadPaths.exportName in module)) {
           throw new Error(`${loadPaths.exportName} not found in module (exportName:${loadPaths.exportName}, ${loadPaths.filePath})`);
         }
-        moduleData = module[loadPaths.exportName];
+        moduleData = Object.assign({}, module[loadPaths.exportName]);
       } else {
-        moduleData = module.default;
+        if (typeof module.default === "undefined") {
+          moduleData = Object.assign({}, module);
+        } else {
+          moduleData = Object.assign({}, module.default);
+        }
       }
       this.#registrar.register(loadName, moduleData);
     }
