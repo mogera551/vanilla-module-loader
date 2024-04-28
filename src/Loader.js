@@ -187,15 +187,23 @@ export class Loader {
       }
       let moduleData;
       if (typeof loadPaths.exportName !== "undefined") {
-        if (!(loadPaths.exportName in module)) {
+        if (typeof module.default !== "undefined") {
+          if (loadPaths.exportName in module.default) {
+            moduleData = Object.assign({}, module.default[loadPaths.exportName]);
+          }
+        } else {
+          if (loadPaths.exportName in module) {
+            moduleData = Object.assign({}, module[loadPaths.exportName]);
+          }
+        }
+        if (typeof moduleData === "undefined" ) {
           throw new Error(`${loadPaths.exportName} not found in module (exportName:${loadPaths.exportName}, ${loadPaths.filePath})`);
         }
-        moduleData = Object.assign({}, module[loadPaths.exportName]);
       } else {
-        if (typeof module.default === "undefined") {
-          moduleData = Object.assign({}, module);
-        } else {
+        if (typeof module.default !== "undefined") {
           moduleData = Object.assign({}, module.default);
+        } else {
+          moduleData = Object.assign({}, module);
         }
       }
       this.#registrar.register(loadName, moduleData);

@@ -275,6 +275,32 @@ test('loader module load default multi', async () => {
 
 });
 
+test('loader module load default multi default', async () => {
+  const config = {
+    defaultNameType:"uppercamel",
+    defaultPath:"../test_modules/default/MultiDefault.js#{SubName}", 
+    loadNames:[ "myapp-main", "myapp-sub" ],
+    prefixMap: {
+    }
+  }
+  const loaded = [];
+  const RegistrarEx = class extends Registrar {
+    static register(name, module) {
+      loaded.push({ name, module });
+    }
+  };
+
+  const loader = new Loader(RegistrarEx);
+  loader.config(config);
+  return loader.load().then(() => {
+    expect(loaded).toEqual([
+      { name:"myapp-main", module: { name:"./default/MultiDefault.js#MyappMain" } },
+      { name:"myapp-sub", module: { name:"./default/MultiDefault.js#MyappSub" } },
+    ]);
+  });
+
+});
+
 test('loader module load prefix match', async () => {
   const config = {
     defaultNameType:"uppercamel",
@@ -406,6 +432,29 @@ test('loader module multi load fail', async () => {
   const config = {
     defaultNameType:"uppercamel",
     defaultPath: "../test_modules/default/Multi.js#{SubName}", 
+    loadNames:[ "myapp-main2", "myapp-sub2" ],
+    prefixMap: {
+    }
+  }
+  const loaded = [];
+  const RegistrarEx = class extends Registrar {
+    static register(name, module) {
+      loaded.push({ name, module });
+    }
+  };
+
+  const loader = new Loader(RegistrarEx);
+  loader.config(config);
+  expect(() => {
+    return loader.load()
+  }).rejects.toThrow(Error)
+
+});
+
+test('loader module multi default load fail', async () => {
+  const config = {
+    defaultNameType:"uppercamel",
+    defaultPath: "../test_modules/default/MultiDefault.js#{SubName}", 
     loadNames:[ "myapp-main2", "myapp-sub2" ],
     prefixMap: {
     }
