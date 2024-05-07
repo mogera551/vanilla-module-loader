@@ -418,11 +418,11 @@ class Loader {
       if (typeof loadPaths.exportName !== "undefined") {
         if (typeof module.default !== "undefined") {
           if (loadPaths.exportName in module.default) {
-            moduleData = Object.assign({}, module.default[loadPaths.exportName]);
+            moduleData = module.default[loadPaths.exportName];
           }
         } else {
           if (loadPaths.exportName in module) {
-            moduleData = Object.assign({}, module[loadPaths.exportName]);
+            moduleData = module[loadPaths.exportName];
           }
         }
         if (typeof moduleData === "undefined" ) {
@@ -430,7 +430,7 @@ class Loader {
         }
       } else {
         if (typeof module.default !== "undefined") {
-          moduleData = Object.assign({}, module.default);
+          moduleData = module.default;
         } else {
           moduleData = Object.assign({}, module);
         }
